@@ -1,0 +1,66 @@
+.pagination {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-width: fit-content;
+  gap: 10px;
+
+  .icon-btn {
+    padding: 5px;
+    cursor: pointer;
+    min-height: 1em;
+    min-width: 1em;
+    text-align: center;
+    font-size: 12px;
+    border: none;
+    background: none;
+    text-shadow: 1px black;
+
+    &.primary {
+      background-color: rgb(18, 235, 255);
+    }
+
+    &.secondary {
+      background-color: rgb(73, 251, 37);
+    }
+
+    &.rounded {
+      border: 1px solid black;
+      border-radius: 50%;
+    }
+
+    &.outlined {
+      border: 1px solid black;
+    }
+  }
+  .pagination-item {
+    padding: 5px;
+    min-height: 1em;
+    min-width: 1em;
+    text-align: center;
+    cursor: pointer;
+
+    &.rounded {
+      border: 1px solid black;
+      border-radius: 50%;
+    }
+
+    &.outlined {
+      border: 1px solid black;
+    }
+
+    &.primary {
+      background-color: rgb(188, 245, 245);
+      &.active {
+        background-color: rgb(18, 235, 255);
+      }
+    }
+
+    &.secondary {
+      background-color: rgb(223, 252, 196);
+      &.active {
+        background-color: rgb(73, 251, 37);
+      }
+    }
+  }
+}

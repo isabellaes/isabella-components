@@ -1,1 +1,3 @@
-# isabella-components
+# Isabella - components
+
+### Pagination
