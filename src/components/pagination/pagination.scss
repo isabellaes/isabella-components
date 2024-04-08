@@ -81,26 +81,3 @@
     }
   }
 }
-
-/* 
-
-
-    .pagination .page-item.normal.ts-remove,
-    .pagination .page-item.normal.ts-insert {
-      width: 0;
-      opacity: 0;
-      margin: 0;
-    }
-    .pagination .page-item.normal {
-      width: 1.5rem;
-      opacity: 1;
-      transition: width   ease-in-out .3s .15s,
-                  opacity ease-in-out .25s .15s,
-                  margin  ease-in-out .25s .15s;
-    }
-   
-    .pagination .page-item a {
-      transition: background-color .15s ease-in-out, color .15s ease-in-out;
-    }
-
-*/
