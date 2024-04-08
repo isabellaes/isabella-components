@@ -10,6 +10,7 @@
   max-width: max-content;
   margin: 0.5em;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  transition: background-color 2s ease-out;
 
   &.primary {
     background-color: $primaryColor_background;
@@ -68,6 +69,7 @@
       &.active {
         background-color: $primaryColor_active;
         outline: 1px solid $primaryColor_outline;
+        transition: background-color 2s ease-in;
       }
     }
 
@@ -76,6 +78,7 @@
       &.active {
         background-color: $secondaryColor_active;
         outline: 1px solid $secondaryColor_outline;
+        transition: background-color 2s ease-in;
       }
     }
   }
