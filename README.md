@@ -1,8 +1,10 @@
 # Isabella - components
 
 ### Pagination
+![Skärmbild 2024-04-08 112556](https://github.com/isabellaes/isabella-components/assets/90759936/15a3afea-5829-4c9b-a15f-c5d8d715c4a9)
 
 ```js
+
 type PaginationProps = {
   count: number,
   onChange: (value: number) => void,
