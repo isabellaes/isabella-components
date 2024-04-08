@@ -2,8 +2,27 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  min-width: fit-content;
+  justify-content: center;
   gap: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  min-width: 200px;
+  max-width: max-content;
+  margin: 0.5em;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+
+  &.primary {
+    background-color: rgb(240, 240, 238);
+  }
+
+  &.secondary {
+    background-color: rgb(199, 183, 214);
+  }
+
+  &.rounded {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 50px;
+  }
 
   .icon-btn {
     padding: 5px;
@@ -15,22 +34,20 @@
     border: none;
     background: none;
     text-shadow: 1px black;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 
     &.primary {
-      background-color: rgb(18, 235, 255);
+      background-color: rgb(241, 241, 240);
     }
 
     &.secondary {
-      background-color: rgb(73, 251, 37);
+      background-color: rgb(199, 183, 214);
     }
 
     &.rounded {
-      border: 1px solid black;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
+        0 2px 4px 0 rgba(0, 0, 0, 0.19);
       border-radius: 50%;
-    }
-
-    &.outlined {
-      border: 1px solid black;
     }
   }
   .pagination-item {
@@ -39,28 +56,51 @@
     min-width: 1em;
     text-align: center;
     cursor: pointer;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 
     &.rounded {
-      border: 1px solid black;
+      box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2),
+        0 2px 4px 0 rgba(0, 0, 0, 0.19);
       border-radius: 50%;
     }
 
-    &.outlined {
-      border: 1px solid black;
-    }
-
     &.primary {
-      background-color: rgb(188, 245, 245);
+      background-color: rgb(240, 240, 238);
       &.active {
-        background-color: rgb(18, 235, 255);
+        background-color: rgb(203, 203, 202);
+        outline: 1px solid rgb(138, 138, 136);
       }
     }
 
     &.secondary {
-      background-color: rgb(223, 252, 196);
+      background-color: rgb(199, 183, 214);
       &.active {
-        background-color: rgb(73, 251, 37);
+        background-color: rgb(187, 159, 212);
+        outline: 1px solid rgb(170, 125, 210);
       }
     }
   }
 }
+
+/* 
+
+
+    .pagination .page-item.normal.ts-remove,
+    .pagination .page-item.normal.ts-insert {
+      width: 0;
+      opacity: 0;
+      margin: 0;
+    }
+    .pagination .page-item.normal {
+      width: 1.5rem;
+      opacity: 1;
+      transition: width   ease-in-out .3s .15s,
+                  opacity ease-in-out .25s .15s,
+                  margin  ease-in-out .25s .15s;
+    }
+   
+    .pagination .page-item a {
+      transition: background-color .15s ease-in-out, color .15s ease-in-out;
+    }
+
+*/

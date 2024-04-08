@@ -5,8 +5,10 @@ type PaginationProps = {
   count: number;
   onChange: (value: number) => void;
   currentPage: number;
-  variant: "rounded" | "outlined";
+  variant: "rounded" | "square";
   color: "primary" | "secondary";
+  max?: number;
+  siblingCount?: number;
 };
 
 const Pagination = ({
@@ -15,9 +17,12 @@ const Pagination = ({
   count,
   onChange,
   color,
+  max,
+  siblingCount,
 }: PaginationProps) => {
   const [page, setPage] = useState(1);
-  const [maxLength, setMaxLength] = useState(10);
+  const [maxLength] = useState(max ? max : 5);
+  const [sibCount] = useState(siblingCount ? siblingCount : 2);
 
   const countArray: number[] = [];
   const displayedNumbers: number[] = [];
@@ -32,12 +37,12 @@ const Pagination = ({
     }
 
     if (count > maxLength) {
-      const startIndex = page - 1;
-      const endIndex = startIndex + maxLength;
-      if (endIndex <= count) {
-        displayedNumbers.push(...countArray.slice(startIndex, endIndex));
+      const startIndex = page - sibCount - 1;
+      const endIndex = page + sibCount;
+      if (page <= maxLength) {
+        displayedNumbers.push(...countArray.slice(0, maxLength));
       } else {
-        displayedNumbers.push(...countArray.slice(count - maxLength, count));
+        displayedNumbers.push(...countArray.slice(startIndex, endIndex));
       }
     } else {
       displayedNumbers.push(...countArray);
@@ -59,7 +64,7 @@ const Pagination = ({
   }, [count, currentPage, maxLength, onChange, page, variant, color]);
 
   return (
-    <div className="pagination">
+    <div className={`${variant} ${color} pagination`}>
       <button
         onClick={() => {
           if (page > 1) {
@@ -71,9 +76,9 @@ const Pagination = ({
       >
         &#129120;
       </button>
-      {count > maxLength && page > 2 && <>...</>}
+      {count > maxLength && page > maxLength && <>...</>}
       {calculatePaginationItems()}
-      {count > maxLength && page < count - maxLength + 1 && <>...</>}
+      {count > maxLength && page < count - sibCount && <>...</>}
       <button
         onClick={() => {
           if (page < count) {
@@ -95,7 +100,7 @@ type PaginationItemProps = {
   value: number;
   active: boolean;
   onChange: () => void;
-  variant: "rounded" | "outlined";
+  variant: "rounded" | "square";
   color: "primary" | "secondary";
 };
 export const PaginationItem = ({

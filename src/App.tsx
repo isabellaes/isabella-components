@@ -12,7 +12,7 @@ function App() {
     setPage2(value);
   }
   return (
-    <>
+    <div>
       <Pagination
         currentPage={currentPage1}
         count={10}
@@ -24,10 +24,11 @@ function App() {
         currentPage={currentPage2}
         count={25}
         onChange={handlePageChange2}
-        variant="outlined"
+        variant="square"
         color="secondary"
+        max={4}
       />
-    </>
+    </div>
   );
 }
 
