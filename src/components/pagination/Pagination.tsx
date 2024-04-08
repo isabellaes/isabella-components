@@ -1,5 +1,4 @@
 import { useEffect, useState, useCallback } from "react";
-import "./pagination.scss";
 
 type PaginationProps = {
   count: number;
