@@ -2,8 +2,6 @@
 
 ### Pagination
 
-!["Pagination img"](src\assets\Skärmbild 2024-04-08 112556.png)
-
 ```js
 type PaginationProps = {
   count: number,
@@ -17,6 +15,9 @@ type PaginationProps = {
 ```
 
 count - Number of pagination items
+
 onChange - function to handle click on pagination item
+
 max - number of visible pagination items (default 5)
+
 siblingCount - number of visible pagination items before and after current (default 2)
