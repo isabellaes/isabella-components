@@ -12,11 +12,11 @@
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 
   &.primary {
-    background-color: rgb(240, 240, 238);
+    background-color: $primaryColor_background;
   }
 
   &.secondary {
-    background-color: rgb(199, 183, 214);
+    background-color: $secondaryColor_background;
   }
 
   &.rounded {
@@ -34,49 +34,48 @@
     border: none;
     background: none;
     text-shadow: 1px black;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 2px 4px 0 $boxshadowColor, 0 3px 10px 0 $boxshadowColor;
 
     &.primary {
-      background-color: rgb(241, 241, 240);
+      background-color: $primaryColor_background;
     }
 
     &.secondary {
-      background-color: rgb(199, 183, 214);
+      background-color: $secondaryColor_background;
     }
 
     &.rounded {
-      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
-        0 2px 4px 0 rgba(0, 0, 0, 0.19);
+      box-shadow: 0 2px 4px 0 $boxshadowColor, 0 2px 4px 0 $boxshadowColor;
       border-radius: 50%;
     }
   }
+
   .pagination-item {
     padding: 5px;
     min-height: 1em;
     min-width: 1em;
     text-align: center;
     cursor: pointer;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 2px 4px 0 $boxshadowColor, 0 3px 10px 0 $boxshadowColor;
 
     &.rounded {
-      box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2),
-        0 2px 4px 0 rgba(0, 0, 0, 0.19);
+      box-shadow: 0 2px 6px 0 $boxshadowColor, 0 2px 4px 0 $boxshadowColor;
       border-radius: 50%;
     }
 
     &.primary {
-      background-color: rgb(240, 240, 238);
+      background-color: $primaryColor_background;
       &.active {
-        background-color: rgb(203, 203, 202);
-        outline: 1px solid rgb(138, 138, 136);
+        background-color: $primaryColor_active;
+        outline: 1px solid $primaryColor_outline;
       }
     }
 
     &.secondary {
-      background-color: rgb(199, 183, 214);
+      background-color: $secondaryColor_background;
       &.active {
-        background-color: rgb(187, 159, 212);
-        outline: 1px solid rgb(170, 125, 210);
+        background-color: $secondaryColor_active;
+        outline: 1px solid $secondaryColor_outline;
       }
     }
   }
