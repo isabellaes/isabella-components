@@ -51,6 +51,7 @@ const Pagination = ({
       <>
         {displayedNumbers.map((n) => (
           <PaginationItem
+            key={n}
             onChange={() => onChange(n)}
             value={n}
             active={n === page}
