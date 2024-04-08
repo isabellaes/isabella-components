@@ -8,10 +8,6 @@ function App() {
     setPage1(value);
   }
 
-  const [currentPage2, setPage2] = useState(1);
-  function handlePageChange2(value: number) {
-    setPage2(value);
-  }
   return (
     <div>
       <Pagination
@@ -19,15 +15,7 @@ function App() {
         count={10}
         onChange={handlePageChange}
         variant="rounded"
-        color="primary"
-      />
-      <Pagination
-        currentPage={currentPage2}
-        count={25}
-        onChange={handlePageChange2}
-        variant="square"
         color="secondary"
-        max={4}
       />
     </div>
   );
