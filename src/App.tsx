@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Pagination from "./components/pagination/Pagination";
 import "./style/main.scss";
+import Stepper from "./components/Stepper/Stepper";
 
 function App() {
   const [currentPage1, setPage1] = useState(1);
@@ -17,6 +18,16 @@ function App() {
         variant="rounded"
         color="secondary"
       />
+      <Stepper startStep={{
+        title: "First",
+        content: "1. first step"
+      }} midleStep={{
+        title: "Midle",
+        content: "2. second step"
+      }} finishStep={{
+        title: "Finish",
+        content: "3. third step"
+      }}/>
     </div>
   );
 }
