@@ -1,0 +1,42 @@
+.chart {
+  table {
+    display: flex;
+    flex-direction: column;
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+  .column {
+    display: flex;
+    flex-direction: column;
+  }
+  .table-row {
+    display: flex;
+    flex-direction: row;
+    min-height: 5em;
+    background-color: aqua;
+    min-width: fit-content;
+
+    .table-data {
+      min-width: 5em;
+      min-height: 5em;
+      margin: 0 5px 0 5px;
+    }
+
+    .background {
+      background-color: blue;
+    }
+  }
+
+  .label {
+    min-width: 5em;
+    margin: 0 5px 0 5px;
+    text-align: center;
+  }
+
+  .data {
+    min-height: 5em;
+    margin: 5px 0 5px 0;
+  }
+}
