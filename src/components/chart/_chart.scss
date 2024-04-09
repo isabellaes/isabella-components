@@ -2,6 +2,9 @@
   table {
     display: flex;
     flex-direction: column;
+    margin: 0.5em;
+    align-items: center;
+    justify-content: center;
   }
   .row {
     display: flex;
@@ -13,30 +16,33 @@
   }
   .table-row {
     display: flex;
-    flex-direction: row;
     min-height: 5em;
-    background-color: aqua;
+    background-color: rgb(152, 194, 194);
     min-width: fit-content;
+    justify-content: center;
+    align-items: flex-end;
 
     .table-data {
       min-width: 5em;
-      min-height: 5em;
-      margin: 0 5px 0 5px;
+      margin: 0 0.5em 0 0.5em;
+      background-color: rgb(121, 121, 193);
+      position: relative;
+      bottom: 0;
     }
 
-    .background {
-      background-color: blue;
+    .table-data:hover {
+      background-color: rgb(144, 45, 214);
     }
   }
 
   .label {
     min-width: 5em;
-    margin: 0 5px 0 5px;
+    margin: 0.5em;
     text-align: center;
   }
 
   .data {
-    min-height: 5em;
-    margin: 5px 0 5px 0;
+    min-height: 3em;
+    margin: 0.5em;
   }
 }

@@ -1,8 +1,3 @@
-//labels string[]
-//dataSet object{} -> data: number[] color: string[] backgroundColor: string
-//label and data in right order
-//box for data object -> set Hight to number in em
-//data number to the left
 type ChartPropsType = {
   labels: string[];
   dataset: {
@@ -13,22 +8,34 @@ type ChartPropsType = {
   };
 };
 const Chart = ({ labels, dataset }: ChartPropsType) => {
+  let numbers: number[] = dataset.data.slice(0);
+  numbers.sort((a, b) => b - a);
+
   return (
     <div className="chart">
       <table>
         <div className="row">
           <div className="data column">
-            {dataset.data.map((d) => (
-              <p>{d}</p>
+            {numbers.map((d) => (
+              <p className="data">{d}</p>
             ))}
           </div>
-          {dataset.data.map((d) => (
-            <tr className="table-row">
-              <td className="table-data"></td>
-            </tr>
-          ))}
+
+          {labels.map((n, index) => {
+            const num = dataset.data[index] * 3;
+            const height = num.toString() + "em";
+            console.log(height);
+
+            return (
+              <tr className="table-row">
+                <td className="table-data" style={{ height: height }}></td>
+              </tr>
+            );
+          })}
         </div>
-        <div className="row">
+        <div className="row ">
+          <p className="data"> </p>
+          <p className="data"> </p>
           {labels.map((x) => (
             <p className="label">{x}</p>
           ))}
