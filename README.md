@@ -66,7 +66,9 @@ Example
   }}
 />
 ```
+
 ![Skärmbild 2024-04-10 113616](https://github.com/isabellaes/isabella-components/assets/90759936/87e44462-856a-4f44-825f-8db61a9e31b9)
 
+### Stepper - Eva-Li
 
-
+### Navbar - Goran
