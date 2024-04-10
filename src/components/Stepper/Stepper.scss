@@ -3,7 +3,7 @@
   height: 100vh;
 
   .container {
-    border: 20px solid $color-blue;
+    border: 20px solid $secondaryColor_outline;
     padding: 40px;
     @include flexDirection(column);
   }
@@ -27,40 +27,40 @@
       width: 75px;
       height: 75px;
       border-radius: 50%;
-      border: 2px solid $color-gray-light;
+      border: 2px solid $primaryColor_outline;
     }
 
     .start-stepper {
-      background-color: $color-green;
+      background-color: $secondaryColor_background;
     }
     .midle-stepper {
-      background-color: $color-yellow;
+      background-color: $secondaryColor_active;
     }
     .finish-stepper {
-      background-color: $color-red;
+      background-color: $secondaryColor_outline;
     }
 
     .active {
       animation: borderAnimation 1s;
     }
     .not-active {
-      background-color: $color-gray-light;
+      background-color: $primaryColor_background;
     }
   }
 
   .btn {
     padding: 10px;
-    color: $color-white;
+
     margin-bottom: 50px;
-    background-color: $color-blue;
+    background-color: $secondaryColor_active;
     font-size: 20px;
-    border: 2px solid $color-plum;
+    border: 2px solid $primaryColor_active;
   }
   .btn:hover {
     cursor: pointer;
-    background-color: $color-plum;
-    border: 2px solid $color-blue;
-    color: $color-blue;
+    background-color: $secondaryColor_outline;
+    border: 2px solid $primaryColor_active;
+
     // animation: namn 3s;
   }
 }

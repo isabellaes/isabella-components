@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
 @import "../../style/variables/colors";
 
+/* 
+$secondaryColor_background: rgb(199, 183, 214);
+$secondaryColor_active: rgb(187, 159, 212);
+$secondaryColor_outline
+*/
 .NavBar {
   header {
     display: flex;
@@ -8,8 +13,8 @@
     justify-content: space-between;
     height: 45px;
     padding: 0 1.7rem;
-    background-color: $--mainColor;
-    color: $--textColor;
+    background-color: $secondaryColor_background;
+    color: black;
     font-family: "Oswald", sans-serif;
 
     .nav-btn {
@@ -18,7 +23,7 @@
       background: transparent;
       border: none;
       outline: none;
-      color: $--textColor;
+      color: black;
       visibility: hidden;
       opacity: 0;
       font-size: 0.8rem;
@@ -34,11 +39,11 @@
   nav {
     a {
       margin: 0 1.6rem;
-      color: $--textColor;
+      color: black;
       text-decoration: none;
 
       &:hover {
-        color: $--secenderyColor;
+        color: $secondaryColor_active;
       }
     }
 
@@ -72,7 +77,7 @@
       align-items: center;
       justify-content: center;
       gap: 1.3rem;
-      background-color: $--mainColor;
+      background-color: $secondaryColor_background;
       transition: 1.5s;
       transform: translateY(-100vh);
 
