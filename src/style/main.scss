@@ -11,3 +11,13 @@
 @import "./variables/stepperColors";
 @import "../components/pagination/pagination";
 @import "../components/Stepper/Stepper.scss";
+@import "../components/Navbar/NavBar";
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+  }
+
