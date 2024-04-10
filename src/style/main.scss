@@ -1,5 +1,16 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import "./Mixins/mixins";
 @import "./variables/colors";
+@import "./variables/stepperColors";
 @import "../components/pagination/pagination";
+@import "../components/Stepper/Stepper.scss";
 @import "../components/Navbar/NavBar";
 
 
@@ -9,3 +20,4 @@
     box-sizing: border-box;
     font-family: "Oswald", sans-serif;
   }
+
