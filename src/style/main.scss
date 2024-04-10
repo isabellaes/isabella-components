@@ -1,2 +1,11 @@
 @import "./variables/colors";
 @import "../components/pagination/pagination";
+@import "../components/Navbar/NavBar";
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+  }
