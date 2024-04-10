@@ -16,7 +16,7 @@
   }
   .table-col {
     display: flex;
-    background-color: rgb(152, 194, 194);
+    background-color: $primaryColor_background;
     min-width: fit-content;
     justify-content: center;
     align-items: flex-end;
@@ -24,13 +24,13 @@
     .table-data {
       min-width: 5em;
       margin: 0 0.5em 0 0.5em;
-      background-color: rgb(121, 121, 193);
+      background-color: $secondaryColor_outline;
       position: relative;
       bottom: 0;
     }
 
     .table-data:hover {
-      background-color: rgb(144, 45, 214) !important;
+      background-color: $secondaryColor_active !important;
     }
   }
 
