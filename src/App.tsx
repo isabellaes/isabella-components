@@ -30,11 +30,28 @@ function App() {
         labels={["Mån", "Tis", "Ons", "Tor", "Fre", "Lör", "Sön"]}
         dataset={{
           data: [5, 2, 3, 8, 1, 9, 7],
-          colors: [],
-          backgroundColor: "",
-          type: "horisontal",
+          colors: [
+            "#C39DDA",
+            "#E1941C",
+            "#49E11C",
+            "#C39DDA",
+            "#E1941C",
+            "#1CE1CF",
+            "#49E11C",
+          ],
+          backgroundColor: "#DEF5F3",
         }}
       ></Chart>
+
+      <Chart
+        labels={["Mån", "Tis", "Ons", "Tor", "Fre", "Lör", "Sön"]}
+        dataset={{
+          data: [5, 2, 3, 8, 1, 9, 7],
+          colors: [],
+          backgroundColor: "",
+        }}
+      ></Chart>
+
       <Stepper
         startStep={{
           title: "First",

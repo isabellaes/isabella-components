@@ -4,12 +4,26 @@ type ChartPropsType = {
     data: number[];
     colors: string[];
     backgroundColor: string;
-    type: "horisontal" | "vertical";
   };
 };
 const Chart = ({ labels, dataset }: ChartPropsType) => {
   let numbers: number[] = dataset.data.slice(0);
   numbers.sort((a, b) => b - a);
+
+  const removeDups = (arr: number[]): number[] => {
+    return arr.filter((item, index) => arr.indexOf(item) === index);
+  };
+  numbers = removeDups(numbers);
+
+  function calculateheight(index: number) {
+    const data = dataset.data[index];
+    if (data) {
+      const i = numbers.indexOf(data);
+      const l = numbers.length - i;
+      return l;
+    }
+    return 0;
+  }
 
   return (
     <div className="chart">
@@ -17,18 +31,38 @@ const Chart = ({ labels, dataset }: ChartPropsType) => {
         <div className="row">
           <div className="data column">
             {numbers.map((d) => (
-              <p className="data">{d}</p>
+              <div className="data">{d}</div>
             ))}
           </div>
 
           {labels.map((n, index) => {
-            const num = dataset.data[index] * 3;
-            const height = num.toString() + "em";
-            console.log(height);
+            const colHeight = (numbers.length * 4).toString() + "em";
+            let num = calculateheight(index);
+            const dataHeight = (num * 4).toString() + "em";
 
             return (
-              <tr className="table-row">
-                <td className="table-data" style={{ height: height }}></td>
+              <tr
+                className="table-col"
+                style={
+                  dataset.backgroundColor
+                    ? {
+                        backgroundColor: dataset.backgroundColor,
+                        height: colHeight,
+                      }
+                    : { height: colHeight }
+                }
+              >
+                <td
+                  className="table-data"
+                  style={
+                    dataset.colors[index]
+                      ? {
+                          height: dataHeight,
+                          backgroundColor: dataset.colors[index],
+                        }
+                      : { height: dataHeight }
+                  }
+                ></td>
               </tr>
             );
           })}
