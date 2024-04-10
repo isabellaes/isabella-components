@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
 @import "../../style/variables/colors";
-
 
 .NavBar {
   header {
@@ -11,7 +10,8 @@
     padding: 0 1.7rem;
     background-color: $--mainColor;
     color: $--textColor;
-    
+    font-family: "Oswald", sans-serif;
+
     .nav-btn {
       padding: 5px;
       cursor: pointer;
@@ -21,8 +21,8 @@
       color: $--textColor;
       visibility: hidden;
       opacity: 0;
-      font-size: .8rem;
-      
+      font-size: 0.8rem;
+
       &.nav-close-btn {
         position: absolute;
         top: 2rem;
@@ -30,29 +30,29 @@
       }
     }
   }
-  
+
   nav {
     a {
       margin: 0 1.6rem;
       color: $--textColor;
       text-decoration: none;
-      
+
       &:hover {
         color: $--secenderyColor;
       }
     }
-    
+
     &.responsive_nav {
       transform: none;
     }
-    
+
     .nav-close-btn {
       position: absolute;
       top: 2rem;
       right: 2rem;
     }
   }
-  
+
   @media only screen and (max-width: 1024px) {
     header {
       .nav-btn {
@@ -60,7 +60,7 @@
         opacity: 1;
       }
     }
-    
+
     nav {
       position: fixed;
       top: 0;
@@ -75,11 +75,11 @@
       background-color: $--mainColor;
       transition: 1.5s;
       transform: translateY(-100vh);
-      
+
       &.responsive_nav {
         transform: none;
       }
-      
+
       a {
         font-size: 1.3rem;
       }
