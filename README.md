@@ -40,3 +40,29 @@ function handlePageChange(value: number) {
   color="primary"
 />;
 ```
+
+### Chart
+
+```js
+type ChartPropsType = {
+  labels: string[],
+  dataset: {
+    data: number[],
+    colors: string[],
+    backgroundColor: string,
+  },
+};
+```
+
+Example
+
+```js
+<Chart
+  labels={["Mån", "Tis", "Ons", "Tor", "Fre", "Lör", "Sön"]}
+  dataset={{
+    data: [5, 2, 3, 8, 1, 9, 7],
+    colors: [],
+    backgroundColor: "",
+  }}
+/>
+```

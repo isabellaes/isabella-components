@@ -1,0 +1,48 @@
+.chart {
+  table {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5em;
+    align-items: center;
+    justify-content: center;
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+  .column {
+    display: flex;
+    flex-direction: column;
+  }
+  .table-col {
+    display: flex;
+    background-color: rgb(152, 194, 194);
+    min-width: fit-content;
+    justify-content: center;
+    align-items: flex-end;
+
+    .table-data {
+      min-width: 5em;
+      margin: 0 0.5em 0 0.5em;
+      background-color: rgb(121, 121, 193);
+      position: relative;
+      bottom: 0;
+    }
+
+    .table-data:hover {
+      background-color: rgb(144, 45, 214) !important;
+    }
+  }
+
+  .label {
+    min-width: 5em;
+    margin: 0.5em;
+    text-align: center;
+  }
+
+  .data {
+    display: flex;
+    min-height: 4em;
+    margin: 0 0.5em 0 0.5em;
+  }
+}
