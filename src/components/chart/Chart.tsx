@@ -36,7 +36,7 @@ const Chart = ({ labels, dataset }: ChartPropsType) => {
           </div>
 
           {labels.map((n, index) => {
-            const colHeight = (numbers.length * 4).toString() + "em";
+            const colHeight = (numbers.length * 4).toString() + ".5em";
             let num = calculateheight(index);
             const dataHeight = (num * 4).toString() + "em";
 
